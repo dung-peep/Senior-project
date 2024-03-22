@@ -5,13 +5,14 @@
     "main": "script.js",
     "type": "module",
     "scripts": {
-      "dev": "node script.js"
+        "dev": "node script.js"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
-      "dotenv": "^16.0.3",
-      "openai": "^3.2.1"
+        "dotenv": "^16.0.3",
+        "express": "^4.19.1",
+        "openai": "^3.2.1"
     }
-  }
+}
