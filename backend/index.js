@@ -1,5 +1,5 @@
 import express from 'express'
-import { main, openAI } from "./script.js"
+import { openAI } from "./script.js"
 
 
 const app = express()

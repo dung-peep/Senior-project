@@ -3,6 +3,12 @@ import { Configuration, OpenAIApi } from "openai"
 import * as fsPromises from "fs/promises"
 import * as fs from "fs"
 import readline from "readline"
+import path from "path"
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 
 class OpenAICls {
@@ -26,26 +32,32 @@ class OpenAICls {
   }
 
   #logChatMessage = async (jsonObject) => { // may be prone to race condition depending on how host OS handles reading and writing
-    const fileExists = fs.existsSync("./openAI/responses.json")
-    if(!fileExists){
-      const jsonStr = JSON.stringify([jsonObject], null, 4)
-      fsPromises.writeFile("./openAI/responses.json", jsonStr)
+    const parentPath = path.join(__dirname, 'OpenAI')
+    const filePath = path.join(parentPath, "responses.json")
+
+    const fileExists = fs.existsSync(filePath)
+    if(fileExists){
+      // const jsonStr = JSON.stringify([jsonObject], null, 4)
+      // fsPromises.writeFile(filePath, jsonStr)
+
+      fsPromises.readFile(filePath)
+        .then((jsonValue) => {
+          const listOfResponses = JSON.parse(jsonValue)
+
+          listOfResponses.push(jsonObject)
+          const jsonStr = JSON.stringify(listOfResponses, null, 4)
+
+
+          fsPromises.writeFile(filePath, jsonStr)
+
+        })
     }
     else{
-      fsPromises.mkdir('./openAI', { recursive: true })
-      .then((createDirResponse) => {
-        fsPromises.readFile("./openAI/responses.json")
-          .then((jsonValue) => {
-            const listOfResponses = JSON.parse(jsonValue)
-
-            listOfResponses.push(jsonObject)
-            const jsonStr = JSON.stringify(listOfResponses, null, 4)
-
-
-            fsPromises.writeFile("./openAI/responses.json", jsonStr)
-
-          })
-      })
+      fsPromises.mkdir(parentPath, { recursive: true })
+        .then((createDirResponse) => {
+          const jsonStr = JSON.stringify([jsonObject], null, 4)
+          fsPromises.writeFile(filePath, jsonStr)
+        })
       
     }
   }
@@ -61,36 +73,31 @@ class OpenAICls {
     return response
     
   }
-
-
-
-
-
 }
 
 
 config()
 export const openAI = new OpenAICls(process.env.OPEN_AI_API_KEY)
 
-export const main = () => {
+// export const main = () => {
   
   
-  // userInterface.prompt()
+//   // userInterface.prompt()
 
-  // userInterface.on("line", async input => {
+//   // userInterface.on("line", async input => {
 
-  //   const response = await openAi.createChatCompletion({
-  //     model: "gpt-3.5-turbo",
-  //     messages: [{ role: "user", content: input }],
-  //   })
+//   //   const response = await openAi.createChatCompletion({
+//   //     model: "gpt-3.5-turbo",
+//   //     messages: [{ role: "user", content: input }],
+//   //   })
   
-  //   // console.log("Chat GPT response: ", JSON.stringify(response.data))
+//   //   // console.log("Chat GPT response: ", JSON.stringify(response.data))
   
-  //   console.log(response.data.choices[0].message.content)
-  //   userInterface.prompt()
-  // })
+//   //   console.log(response.data.choices[0].message.content)
+//   //   userInterface.prompt()
+//   // })
 
-}
+// }
 
 
   // const openAi = new OpenAIApi(
