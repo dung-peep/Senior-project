@@ -32,17 +32,21 @@ class OpenAICls {
       fsPromises.writeFile("./openAI/responses.json", jsonStr)
     }
     else{
-      fsPromises.readFile("./openAI/responses.json")
-        .then((jsonValue) => {
-          const listOfResponses = JSON.parse(jsonValue)
+      fsPromises.mkdir('./openAI', { recursive: true })
+      .then((createDirResponse) => {
+        fsPromises.readFile("./openAI/responses.json")
+          .then((jsonValue) => {
+            const listOfResponses = JSON.parse(jsonValue)
 
-          listOfResponses.push(jsonObject)
-          const jsonStr = JSON.stringify(listOfResponses, null, 4)
+            listOfResponses.push(jsonObject)
+            const jsonStr = JSON.stringify(listOfResponses, null, 4)
 
 
-          fsPromises.writeFile("./openAI/responses.json", jsonStr)
+            fsPromises.writeFile("./openAI/responses.json", jsonStr)
 
-        })
+          })
+      })
+      
     }
   }
 
