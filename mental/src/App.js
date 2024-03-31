@@ -1,7 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import {
+  openAIResponse
+} from './apiRequests.js'
+import { useState } from 'react';
+
+
 
 function App() {
+  const [chatGPTResponse, setChatGPTRepsonse] = useState({})
+  useEffect(() => {
+    
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
