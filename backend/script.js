@@ -73,6 +73,24 @@ class OpenAICls {
     return response
     
   }
+
+  terminalInput = () => {
+    userInterface.prompt()
+
+    userInterface.on("line", async input => {
+
+      const response = await OpenAICls.#openAIInstance.createChatCompletion({
+          model: "gpt-3.5-turbo",
+          messages: [{ role: "user", content: input }],
+        })
+      
+        // console.log("Chat GPT response: ", JSON.stringify(response.data))
+      
+        console.log(response.data.choices[0].message.content)
+        userInterface.prompt()
+        this.#logChatMessage(response.data)
+      })
+    }
 }
 
 

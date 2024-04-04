@@ -11,8 +11,8 @@ app.get('/', (req, res) => {
 
 app.get('/openAIResponseTest', async (req, res) => {
     
-    const chatResponse = await openAI.chatCompletionResponse("Hello World!");
-    res.json(chatResponse.data);
+  const chatResponse = await openAI.chatCompletionResponse("Hello World!");
+  res.json(chatResponse.data);
 })
 
 app.post('/queryOpenAIChatBot', async (req, res) => {
