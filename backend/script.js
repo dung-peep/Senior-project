@@ -48,33 +48,53 @@ class OpenAICls {
     if(OpenAICls.#parentPath === undefined){
       OpenAICls.#parentPath = path.join(__dirname, 'OpenAI')
       OpenAICls.#responseHistoryFilePath = path.join(OpenAICls.#parentPath, 'responses.json')
+      OpenAICls.#chatHistoryFilePath = path.join(OpenAICls.#parentPath, 'chatHistory.json')
     }
-    
   }
 
   #logChatGPTMessage = async (jsonObject) => {
     return this.#logChatMessage(jsonObject, OpenAICls.#parentPath, OpenAICls.#responseHistoryFilePath)
   }
 
-  #logConversation = async () => {}
-  
-  #logChatMessage = async (jsonObject, parentFolderPath, filePath) => { // may be prone to race condition depending on how host OS handles reading and writing
-    const fileExists = fs.existsSync(OpenAICls.#responseHistoryFilePath)
-    if(fileExists){
-      return fsPromises.readFile(OpenAICls.#responseHistoryFilePath)
-        .then((jsonValue) => {
-          const listOfResponses = JSON.parse(jsonValue)
+  #logConversation = async (chatGPTMessages, userMessages) => {
+    const response = userMessages.concat(chatGPTMessages)
+    return this.#logChatMessage(response, OpenAICls.#parentPath, OpenAICls.#chatHistoryFilePath)
+  }
 
-          listOfResponses.push(jsonObject)
+  #logChatMessage = async (jsonObject, parentFolderPath, filePath) => { // may be prone to race condition depending on how host OS handles reading and writing
+    const fileExists = fs.existsSync(filePath)
+    if(fileExists){
+      return fsPromises.readFile(filePath)
+        .then((jsonValue) => {
+          let listOfResponses = JSON.parse(jsonValue)
+
+          if(!Array.isArray(listOfResponses)){
+            listOfResponses = [listOfResponses]
+          }
+
+          if(Array.isArray(jsonObject)){
+            listOfResponses.push(...jsonObject)
+          }
+          else{
+            listOfResponses.push(jsonObject)
+          }
+          
           const jsonStr = JSON.stringify(listOfResponses, null, 4)
 
           fsPromises.writeFile(filePath, jsonStr)
         })
     }
     else{
-      return fsPromises.mkdir(OpenAICls.#parentPath, { recursive: true })
+      return fsPromises.mkdir(parentFolderPath, { recursive: true })
         .then((createDirResponse) => {
-          const jsonStr = JSON.stringify([jsonObject], null, 4)
+          let jsonStr = ""
+          if(Array.isArray(jsonObject)){
+            jsonStr = JSON.stringify([...jsonObject], null, 4)
+          }
+          else{
+            jsonStr = JSON.stringify([jsonObject], null, 4)
+          }
+          
           fsPromises.writeFile(filePath, jsonStr)
         })
       
@@ -82,25 +102,30 @@ class OpenAICls {
   }
 
   #readChatHistory = async () => {
-
     try {
       const jsonValue = await fsPromises.readFile(OpenAICls.#responseHistoryFilePath);
       OpenAICls.#chatHistory = JSON.parse(jsonValue);
-      OpenAICls.#messageHistory = OpenAICls.#chatHistory.map((chatMessageEntry)).slice(-5)
-      // const messageHistory = jsonValue.map((value))
+      OpenAICls.#messageHistory = OpenAICls.#chatHistory.map((chatMessageEntry) => choices[0].message.content).slice(-5)
+
+      
     } catch (error) {
       // If file doesn't exist or cannot be read, initialize chatHistory as an empty array
-      this.chatHistory = [];
+      // this.chatHistory = [];
+      OpenAICls.#messageHistory |= []
     }
+
+    return OpenAICls.#messageHistory
   }
 
   chatCompletionResponse = async (input, modelName = "gpt-3.5-turbo", role = "user") => {
+    const messages = [{ role: role, content: input }]
     const response = await OpenAICls.#openAIInstance.createChatCompletion({
       model: modelName,
-      messages: [{ role: role, content: input }],
+      messages: messages,
     })
 
-    this.#logChatMessage(response.data)
+    this.#logConversation(response.data.choices, messages)
+    this.#logChatGPTMessage(response.data)
     
     return response
     
@@ -110,16 +135,17 @@ class OpenAICls {
     OpenAICls.#userInterface.prompt()
 
     OpenAICls.#userInterface.on("line", async input => {
+      const messages = [{ role: "user", content: input }]
       const response = await OpenAICls.#openAIInstance.createChatCompletion({
           model: "gpt-3.5-turbo",
-          messages: [{ role: "user", content: input }],
+          messages: messages,
         })
       
         console.log(response.data.choices[0].message.content)
         OpenAICls.#userInterface.prompt()
 
-        this.#logChatMessage()
-        this.#logChatMessage(response.data)
+        this.#logConversation(response.data.choices.map((choice) => choice.message), messages)
+        this.#logChatGPTMessage(response.data)
       })
     }
 }

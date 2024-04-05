@@ -10,12 +10,6 @@ import { FullWidthTextField } from './components/FullWidthTextField.js'
 
 
 function App() {
-  const [chatGPTResponse, setChatGPTRepsonse] = useState({})
-  useEffect(() => {
-    
-  }, [])
-  
-
   return (
     <div className="App">
       <header className="App-header">
