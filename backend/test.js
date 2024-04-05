@@ -1,3 +1,3 @@
-import { openAI } from "./script";
+import { openAI } from "./script.js";
 
 openAI.terminalInput()

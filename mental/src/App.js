@@ -3,7 +3,9 @@ import './App.css';
 import {
   openAIResponse
 } from './apiRequests.js'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import * as React from 'react';
+import { FullWidthTextField } from './components/FullWidthTextField.js'
 
 
 
@@ -12,21 +14,23 @@ function App() {
   useEffect(() => {
     
   }, [])
+  
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Please tell me how you are feeling?
         </p>
+        <FullWidthTextField/>
         <a
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          // href="https://reactjs.org"
+          // target="_blank"
+          // rel="noopener noreferrer"
         >
-          Learn React
+          Mental Wellness Bot
         </a>
       </header>
     </div>
