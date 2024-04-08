@@ -30,25 +30,25 @@ app.get('/', (req, res) => {
 
 app.get('/openAIResponseTest', async (req, res) => {
     
-  const chatResponse = await openAI.chatCompletionResponse("Hello World!");
+  const chatResponse = await openAI.singleMessageInput("Hello World!");
   res.json(chatResponse.data);
 })
 
 app.post('/queryOpenAIChatBot', async (req, res) => {
   const reqBody = req.body
   
-  const chatMessage = reqBody.chatMessage
+  const chatMessage = reqBody.chatMessageHistory
 
-  const chatResponse = await openAI.chatCompletionResponse(chatMessage);
+  const chatResponse = await openAI.singleMessageInput(chatMessage);
   res.json(chatResponse.data) 
 })
 
 app.post('/queryMentalChatBot', async (req, res) => {
   const reqBody = req.body
   
-  const chatMessage = reqBody.chatMessage
+  const chatMessage = reqBody.chatMessageHistory
 
-  const chatResponse = await openAI.chatCompletionResponse(chatMessage);
+  const chatResponse = await openAI.mentalHealthBot(chatMessage);
   res.json(chatResponse.data) 
 })
 
@@ -57,7 +57,7 @@ app.post('/queryInsultingChatBot', async (req, res) => {
   
   const chatMessage = reqBody.chatMessage
 
-  const chatResponse = await openAI.chatCompletionResponse(chatMessage);
+  const chatResponse = await openAI.insultBot(chatMessage);
   res.json(chatResponse.data) 
 })
 

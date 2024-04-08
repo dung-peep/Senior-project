@@ -117,8 +117,52 @@ class OpenAICls {
     return OpenAICls.#messageHistory
   }
 
-  chatCompletionResponse = async (input, modelName = "gpt-3.5-turbo", role = "user") => {
+  singleMessageInput = async (input, role = "user") => {
     const messages = [{ role: role, content: input }]
+    return this.#chatMessageCompletion(messages)
+  }
+  
+
+  #validatechatHistoryJson = (chatHistory) => {
+    const isValid = chatHistory.every((chatMessage) => {
+      isObject = typeof chatMessage === 'object'
+      hasCorrectProperties = chatHistory.hasOwnProperty('role') && chatHistory.hasOwnProperty('content')
+      return isObject && hasCorrectProperties
+    })
+
+    return isValid
+  }
+
+  mentalHealthBot = async (chatHistory) => {
+    chatPredicate = [{
+      role: "system",
+      content: "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    }]
+
+    chatHistory = chatPredicate.concat(chatHistory)
+
+    return this.#chatMessageCompletion(chatHistory)
+  }
+
+  insultBot = async (chatHistory) => {
+    chatPredicate = [{
+      role: "system",
+      content: "You are talking to an insult bot. Please do not take anything said by this bot personally."
+    }]
+
+    chatHistory = chatPredicate.concat(chatHistory)
+
+    return this.#chatMessageCompletion(chatHistory)
+  }
+
+
+  #chatMessageCompletion = async (messages, modelName = "gpt-3.5-turbo") => {
+    const isValid = this.#validatechatHistoryJson(messages)
+
+    if(!isValid){
+      throw new Error("Messages json is not a valid OpenAI message JSON object")
+    }
+
     const response = await OpenAICls.#openAIInstance.createChatCompletion({
       model: modelName,
       messages: messages,
@@ -128,8 +172,8 @@ class OpenAICls {
     this.#logChatGPTMessage(response.data)
     
     return response
-    
   }
+
 
   terminalInput = () => {
     OpenAICls.#userInterface.prompt()
