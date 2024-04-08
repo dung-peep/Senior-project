@@ -1,6 +1,7 @@
 import { app } from "..";
 import supertest from "supertest";
 import { validateOpenAIResponse } from "./testUtils";
+import { openAI } from "../script.js";
 
 beforeEach((done) => {
     
@@ -9,6 +10,12 @@ beforeEach((done) => {
 afterEach((done) => {
     
 });
+
+test("test OpenAI backend", async () => {
+    openAI.singleMessageInput("Hello World!").then((response) => {
+        validateOpenAIResponse(response);
+    });
+})
 
 test("Server is running", async () => {
     const response = await supertest(app).get("/");
