@@ -43,6 +43,24 @@ app.post('/queryOpenAIChatBot', async (req, res) => {
   res.json(chatResponse.data) 
 })
 
+app.post('/queryMentalChatBot', async (req, res) => {
+  const reqBody = req.body
+  
+  const chatMessage = reqBody.chatMessage
+
+  const chatResponse = await openAI.chatCompletionResponse(chatMessage);
+  res.json(chatResponse.data) 
+})
+
+app.post('/queryInsultingChatBot', async (req, res) => {
+  const reqBody = req.body
+  
+  const chatMessage = reqBody.chatMessage
+
+  const chatResponse = await openAI.chatCompletionResponse(chatMessage);
+  res.json(chatResponse.data) 
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
