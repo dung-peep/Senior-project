@@ -2,7 +2,7 @@ import express from 'express'
 import { openAI } from "./script.js"
 
 
-const app = express()
+export const app = express()
 const port = 4000
 app.use(express.json()) 
 
