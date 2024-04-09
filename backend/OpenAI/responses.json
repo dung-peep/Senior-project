@@ -1,0 +1,117 @@
+[
+    {
+        "id": "chatcmpl-9BwnWw7awhSHyDAlLGWef2LMjL51Q",
+        "object": "chat.completion",
+        "created": 1712634654,
+        "model": "gpt-3.5-turbo-0125",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Hello! How are you feeling today?"
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 54,
+            "completion_tokens": 8,
+            "total_tokens": 62
+        },
+        "system_fingerprint": "fp_b28b39ffa8"
+    },
+    {
+        "id": "chatcmpl-9BwoWO6S6vdicJGajMcVnPNbsyIII",
+        "object": "chat.completion",
+        "created": 1712634716,
+        "model": "gpt-3.5-turbo-0125",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "It's nice to meet you, Ben! How can I help you today?"
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 75,
+            "completion_tokens": 16,
+            "total_tokens": 91
+        },
+        "system_fingerprint": "fp_b28b39ffa8"
+    },
+    {
+        "id": "chatcmpl-9BwolePhIZtwEVS63avlAwZUYLPRj",
+        "object": "chat.completion",
+        "created": 1712634731,
+        "model": "gpt-3.5-turbo-0125",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Your name is Ben! "
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 104,
+            "completion_tokens": 6,
+            "total_tokens": 110
+        },
+        "system_fingerprint": "fp_b28b39ffa8"
+    },
+    {
+        "id": "chatcmpl-9BwqEMukLuhbQKOrR6mYuysQy5a7P",
+        "object": "chat.completion",
+        "created": 1712634822,
+        "model": "gpt-3.5-turbo-0125",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "If you are in the University of South Florida area and looking for mental health resources, here are a few options you can consider:\n\n1. **USF Counseling Center**: The USF Counseling Center provides confidential counseling services for enrolled students. You can contact them to schedule an appointment with a therapist.\n\n2. **USF Psychological Services Center**: This center offers therapy services provided by doctoral students under the supervision of licensed psychologists. They offer affordable counseling services to the USF community.\n\n3. **USF Health Psychiatry and Neurosciences**: They provide comprehensive mental health services including evaluations, medication management, and therapy.\n\n4. **NAMI Hillsborough**: The National Alliance on Mental Illness (NAMI) chapter in Hillsborough County offers support groups, education, and resources for individuals and families dealing with mental health challenges.\n\n5. **Crisis Center of Tampa Bay**: If you need immediate help, you can reach out to the Crisis Center of Tampa Bay by calling their 24/7 crisis hotline at 2-1-1 for emotional support and crisis intervention.\n\nRemember, seeking help is a sign of strength. It's important to take care of your mental health just like you would your physical health."
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 139,
+            "completion_tokens": 243,
+            "total_tokens": 382
+        },
+        "system_fingerprint": "fp_b28b39ffa8"
+    },
+    {
+        "id": "chatcmpl-9BwqzCS3WG5UWkQXh37KBxYupsXTP",
+        "object": "chat.completion",
+        "created": 1712634869,
+        "model": "gpt-3.5-turbo-0125",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "You mentioned earlier that you are in the University of South Florida area. If you need more specific information or resources related to your location, feel free to provide more details, and I'll do my best to help you."
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 396,
+            "completion_tokens": 44,
+            "total_tokens": 440
+        },
+        "system_fingerprint": "fp_b28b39ffa8"
+    }
+]

@@ -1,11 +1,5 @@
 class chatHistoryHolder {
     static #chatHistory = [];
-    static #instance = null;
-
-
-    constructor() {
-        
-    }
 
     addChat(chatMessage, chatRole) {
         const chat = {

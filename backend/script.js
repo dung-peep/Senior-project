@@ -125,8 +125,8 @@ class OpenAICls {
 
   #validatechatHistoryJson = (chatHistory) => {
     const isValid = chatHistory.every((chatMessage) => {
-      isObject = typeof chatMessage === 'object'
-      hasCorrectProperties = chatHistory.hasOwnProperty('role') && chatHistory.hasOwnProperty('content')
+      const isObject = typeof chatMessage === 'object'
+      const hasCorrectProperties = chatMessage.hasOwnProperty('role') && chatMessage.hasOwnProperty('content')
       return isObject && hasCorrectProperties
     })
 
@@ -134,10 +134,12 @@ class OpenAICls {
   }
 
   mentalHealthBot = async (chatHistory) => {
-    chatPredicate = [{
-      role: "system",
-      content: "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
-    }]
+    const chatPredicate = [
+      {
+        role: "system",
+        content: "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+      }
+    ]
 
     chatHistory = chatPredicate.concat(chatHistory)
 
@@ -145,7 +147,7 @@ class OpenAICls {
   }
 
   insultBot = async (chatHistory) => {
-    chatPredicate = [{
+    const chatPredicate = [{
       role: "system",
       content: "You are talking to an insult bot. Please do not take anything said by this bot personally."
     }]

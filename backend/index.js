@@ -52,7 +52,7 @@ app.post('/queryMentalChatBot', async (req, res) => {
   try{
     const reqBody = req.body
     
-    const chatMessage = reqBody.chatMessage
+    const chatMessage = reqBody.chatMessageHistory
 
     const chatResponse = await openAI.mentalHealthBot(chatMessage);
     res.json(chatResponse.data) 
@@ -67,7 +67,7 @@ app.post('/queryInsultingChatBot', async (req, res) => {
   try{
     const reqBody = req.body
     
-    const chatMessage = reqBody.chatMessage
+    const chatMessage = reqBody.chatMessageHistory
 
     const chatResponse = await openAI.insultBot(chatMessage);
     res.json(chatResponse.data) 

@@ -2,10 +2,12 @@ const backendURL = "http://localhost:4000"
 
 const handleFetch = async (endpoint, fetchOptions, handlerFunc) => {
     const url = backendURL + endpoint;
-    return await fetch(endpoint, fetchOptions)
+    return await fetch(url, fetchOptions)
         .catch((err) => console.log(err))
         .then(
-            (res) => res.json(),
+            (res) => {
+                return res.json()
+            },
             (err) => {
                 console.log(`An Error Occured while fetching url ${endpoint}: `, err);
                 throw err;
@@ -13,7 +15,9 @@ const handleFetch = async (endpoint, fetchOptions, handlerFunc) => {
         )
         .catch((err) => console.log(err))
         .then(
-            (responseJson) => handlerFunc(responseJson),
+            (responseJson) => {
+                return handlerFunc(responseJson)
+            },
             (err) => {
                 console.log(`An error occured while convert response from url ${endpoint} to JSON: `, err);
                 throw err;
@@ -82,6 +86,36 @@ export const openAISingleMessageChatBot = async (chatMessage = "") => {
     //     .catch((err) => console.log(err))
 };
 
-export const openAIMentalHealthChatBot = async (chatMessage = "") => {
+export const openAIMentalHealthChatBot = async (chatMessageHistory) => {
+    const endpoint = "/queryMentalChatBot"
 
+    const data = {
+        chatMessageHistory
+    }
+
+    return await handleFetch(endpoint, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+        body: JSON.stringify(data)
+    }, openAIDataHandler)
+}
+
+export const openAIInsultingChatBot = async (chatMessageHistory) => {
+    const endpoint = "/queryInsultingChatBot"
+
+    const data = {
+        chatMessageHistory
+    }
+
+    return await handleFetch(endpoint, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+        body: JSON.stringify(data)
+    }, openAIDataHandler)
 }

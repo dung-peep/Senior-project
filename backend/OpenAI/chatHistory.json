@@ -1,0 +1,167 @@
+[
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "Hello!"
+    },
+    {
+        "index": 0,
+        "message": {
+            "role": "assistant",
+            "content": "Hello! How are you feeling today?"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "Hello!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How are you feeling today?"
+    },
+    {
+        "role": "user",
+        "content": "My name is Ben!"
+    },
+    {
+        "index": 0,
+        "message": {
+            "role": "assistant",
+            "content": "It's nice to meet you, Ben! How can I help you today?"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "Hello!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How are you feeling today?"
+    },
+    {
+        "role": "user",
+        "content": "My name is Ben!"
+    },
+    {
+        "role": "assistant",
+        "content": "It's nice to meet you, Ben! How can I help you today?"
+    },
+    {
+        "role": "user",
+        "content": "What is my name?"
+    },
+    {
+        "index": 0,
+        "message": {
+            "role": "assistant",
+            "content": "Your name is Ben! "
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "Hello!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How are you feeling today?"
+    },
+    {
+        "role": "user",
+        "content": "My name is Ben!"
+    },
+    {
+        "role": "assistant",
+        "content": "It's nice to meet you, Ben! How can I help you today?"
+    },
+    {
+        "role": "user",
+        "content": "What is my name?"
+    },
+    {
+        "role": "assistant",
+        "content": "Your name is Ben! "
+    },
+    {
+        "role": "user",
+        "content": "I'm in the university of south florida area. What are some mental health resources I can look for?"
+    },
+    {
+        "index": 0,
+        "message": {
+            "role": "assistant",
+            "content": "If you are in the University of South Florida area and looking for mental health resources, here are a few options you can consider:\n\n1. **USF Counseling Center**: The USF Counseling Center provides confidential counseling services for enrolled students. You can contact them to schedule an appointment with a therapist.\n\n2. **USF Psychological Services Center**: This center offers therapy services provided by doctoral students under the supervision of licensed psychologists. They offer affordable counseling services to the USF community.\n\n3. **USF Health Psychiatry and Neurosciences**: They provide comprehensive mental health services including evaluations, medication management, and therapy.\n\n4. **NAMI Hillsborough**: The National Alliance on Mental Illness (NAMI) chapter in Hillsborough County offers support groups, education, and resources for individuals and families dealing with mental health challenges.\n\n5. **Crisis Center of Tampa Bay**: If you need immediate help, you can reach out to the Crisis Center of Tampa Bay by calling their 24/7 crisis hotline at 2-1-1 for emotional support and crisis intervention.\n\nRemember, seeking help is a sign of strength. It's important to take care of your mental health just like you would your physical health."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "Hello!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How are you feeling today?"
+    },
+    {
+        "role": "user",
+        "content": "My name is Ben!"
+    },
+    {
+        "role": "assistant",
+        "content": "It's nice to meet you, Ben! How can I help you today?"
+    },
+    {
+        "role": "user",
+        "content": "What is my name?"
+    },
+    {
+        "role": "assistant",
+        "content": "Your name is Ben! "
+    },
+    {
+        "role": "user",
+        "content": "I'm in the university of south florida area. What are some mental health resources I can look for?"
+    },
+    {
+        "role": "assistant",
+        "content": "If you are in the University of South Florida area and looking for mental health resources, here are a few options you can consider:\n\n1. **USF Counseling Center**: The USF Counseling Center provides confidential counseling services for enrolled students. You can contact them to schedule an appointment with a therapist.\n\n2. **USF Psychological Services Center**: This center offers therapy services provided by doctoral students under the supervision of licensed psychologists. They offer affordable counseling services to the USF community.\n\n3. **USF Health Psychiatry and Neurosciences**: They provide comprehensive mental health services including evaluations, medication management, and therapy.\n\n4. **NAMI Hillsborough**: The National Alliance on Mental Illness (NAMI) chapter in Hillsborough County offers support groups, education, and resources for individuals and families dealing with mental health challenges.\n\n5. **Crisis Center of Tampa Bay**: If you need immediate help, you can reach out to the Crisis Center of Tampa Bay by calling their 24/7 crisis hotline at 2-1-1 for emotional support and crisis intervention.\n\nRemember, seeking help is a sign of strength. It's important to take care of your mental health just like you would your physical health."
+    },
+    {
+        "role": "user",
+        "content": "What area am I in?"
+    },
+    {
+        "index": 0,
+        "message": {
+            "role": "assistant",
+            "content": "You mentioned earlier that you are in the University of South Florida area. If you need more specific information or resources related to your location, feel free to provide more details, and I'll do my best to help you."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+    }
+]

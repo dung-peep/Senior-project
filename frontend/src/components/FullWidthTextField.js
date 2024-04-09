@@ -2,7 +2,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import * as React from 'react';
 import './FullWidthTextField.css';
-import { openAIResponse } from '../apiRequests';
+import { openAIMentalHealthChatBot, openAIInsultingChatBot } from '../apiRequests';
 import { openAIChatHistory } from '../openAI/chatHistoryHolder';
 import { useState } from 'react';
 
@@ -41,16 +41,20 @@ export const FullWidthTextField = () => {
           id="fullWidth" 
           value={textInput}
           onChange={(event) => {
-           setTextInput(event.target.value)
-        
+            setTextInput(event.target.value)
           }}
           onKeyDown={async (event) => {
-            if(event.key === 'Enter'){
-              const response = await openAIResponse(textInput);
+            if(event.key === 'Enter' && textInput !== ""){
+              openAIChatHistory.addChat(textInput, "user")
+
+              const chatHistory = openAIChatHistory.getChatHistory()
+              
+              const response = await openAIMentalHealthChatBot(chatHistory);
+
               setChatGPTRepsonse((prev) => {
                 return [...prev, textInput, response.content]
               })
-              openAIChatHistory.addChat(textInput, "user")
+
               openAIChatHistory.addChat(response.content, response.role)
               setTextInput("")
             }
