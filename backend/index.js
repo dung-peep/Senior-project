@@ -35,30 +35,47 @@ app.get('/openAIResponseTest', async (req, res) => {
 })
 
 app.post('/queryOpenAIChatBot', async (req, res) => {
-  const reqBody = req.body
+  try{
+    const reqBody = req.body
   
-  const chatMessage = reqBody.chatMessageHistory
-
-  const chatResponse = await openAI.singleMessageInput(chatMessage);
-  res.json(chatResponse.data) 
+    const chatMessage = reqBody.chatMessageHistory
+    const chatResponse = await openAI.singleMessageInput(chatMessage);
+    res.json(chatResponse.data) 
+  }
+  catch(err){
+    console.log(err)
+    res.status(500).send("An internal error occured")
+  }
 })
 
 app.post('/queryMentalChatBot', async (req, res) => {
-  const reqBody = req.body
-  
-  const chatMessage = reqBody.chatMessageHistory
+  try{
+    const reqBody = req.body
+    
+    const chatMessage = reqBody.chatMessage
 
-  const chatResponse = await openAI.mentalHealthBot(chatMessage);
-  res.json(chatResponse.data) 
+    const chatResponse = await openAI.mentalHealthBot(chatMessage);
+    res.json(chatResponse.data) 
+  }
+  catch(err){
+    console.log(err)
+    res.status(500).send("An internal error occured")
+  }
 })
 
 app.post('/queryInsultingChatBot', async (req, res) => {
-  const reqBody = req.body
-  
-  const chatMessage = reqBody.chatMessage
+  try{
+    const reqBody = req.body
+    
+    const chatMessage = reqBody.chatMessage
 
-  const chatResponse = await openAI.insultBot(chatMessage);
-  res.json(chatResponse.data) 
+    const chatResponse = await openAI.insultBot(chatMessage);
+    res.json(chatResponse.data) 
+  }
+  catch(err){
+    console.log(err)
+    res.status(500).send("An internal error occured")
+  }
 })
 
 app.listen(port, () => {
