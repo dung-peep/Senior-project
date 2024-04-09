@@ -3,6 +3,7 @@ import TextField from '@mui/material/TextField';
 import * as React from 'react';
 import './FullWidthTextField.css';
 import { openAIResponse } from '../apiRequests';
+import { openAIChatHistory } from '../openAI/chatHistoryHolder';
 import { useState } from 'react';
 
 export const FullWidthTextField = () => {
@@ -47,8 +48,10 @@ export const FullWidthTextField = () => {
             if(event.key === 'Enter'){
               const response = await openAIResponse(textInput);
               setChatGPTRepsonse((prev) => {
-                return [...prev, textInput, response]
+                return [...prev, textInput, response.content]
               })
+              openAIChatHistory.addChat(textInput, "user")
+              openAIChatHistory.addChat(response.content, response.role)
               setTextInput("")
             }
           }}
