@@ -16,22 +16,25 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p style={{
-          border: '10px solid rgb(14, 154, 75)',
-        }}>
-          Please tell me how you are feeling?
-        </p>
-        <ChatList/>
-        <a
-          className="App-link"
-          // href="https://reactjs.org"
-          // target="_blank"
-          // rel="noopener noreferrer"
-        >
-          Mental Wellness Bot
-        </a>
+        Mental Health Chat Bot
       </header>
+      <body className='App-Body'>
+        <img src={logo} className="App-logo" alt="logo" />
+          <p style={{
+            border: '10px solid rgb(14, 154, 75)',
+          }}>
+            Please tell me how you are feeling?
+          </p>
+          <ChatList/>
+          <a
+            className="App-link"
+            href="https://forms.gle/1LbkQvzV8ypGLDsr9"
+            // target="_blank"
+            // rel="noopener noreferrer"
+          >
+            Give Feedback
+          </a>
+      </body>
     </div>
   );
 }

@@ -15,7 +15,20 @@
 
 .App-header {
   background-color: rgb(14, 154, 75);
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  min-height: 10vh;
+  max-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(15px + 2vmin);
+  color: white;
+}
+
+.App-Body {
+  background-color: rgb(14, 154, 75);
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +39,7 @@
 
 .App-link {
   color: white;
+  font-size: 20px;
 }
 
 @keyframes App-logo-spin {

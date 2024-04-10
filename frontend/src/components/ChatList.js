@@ -7,21 +7,39 @@ import { openAIChatHistory } from '../openAI/chatHistoryHolder';
 import { useState, useEffect } from 'react';
 import { Avatar, Stack, SnackbarContent, Button, ButtonGroup } from "@mui/material";
 
+const INSULTING_CHAT_BOT = "insulting"
+const MENTAL_HEALTH_CHAT_BOT = "mental health"
 
 export const ChatList = () => {
   const [textInput, setTextInput] = useState("")
   const [localChatHistory, setLocalChatHistory] = useState(openAIChatHistory.getChatHistoryMessages())
-
+  const [chatRole, setChatRole] = useState("user")
+  const [chatAPIMode, setChatAPIMode] = useState(MENTAL_HEALTH_CHAT_BOT)
+  
+  const isMentalHealthChatBot = () => chatAPIMode === MENTAL_HEALTH_CHAT_BOT
+  const isInsultingChatBot = () => chatAPIMode === INSULTING_CHAT_BOT
   const deleteChatMessage = (index) => {
     openAIChatHistory.deleteChat(index)
     setLocalChatHistory(openAIChatHistory.getChatHistoryMessages())
   }
 
+  const chatAPI = async (chatHistory) => {
+    if(isMentalHealthChatBot()){
+      return await openAIMentalHealthChatBot(chatHistory)
+    }
+    else if(isInsultingChatBot()){
+      return await openAIInsultingChatBot(chatHistory)
+    }
+    else{
+      return { content: "Error", role: "error" }
+    }
+  }
+
   const sendChatMessage = async (message) => {
-    openAIChatHistory.addChat(message, "user")
+    openAIChatHistory.addChat(message, chatRole)
 
     const chatHistory = openAIChatHistory.getChatHistory()
-    const response = await openAIInsultingChatBot(chatHistory);
+    const response = await chatAPI(chatHistory);
     openAIChatHistory.addChat(response.content, response.role)
     
     setLocalChatHistory(openAIChatHistory.getChatHistoryMessages())
@@ -43,7 +61,7 @@ export const ChatList = () => {
         {
           localChatHistory.map((response, index) => {
             return (
-              <SnackbarContent message={response} action={() => deleteChatMessage(index)} />
+              <SnackbarContent message={response} /*action={() => deleteChatMessage(index)}*/ />
             )
           })
         }
@@ -86,6 +104,33 @@ export const ChatList = () => {
         <ButtonGroup variant="outlined" aria-label="Basic button group">
           <Button 
             variant="contained" 
+            color="warning"
+            onClick={async () => {
+              setChatAPIMode(openAIMentalHealthChatBot)
+              await sendChatMessage("I need help")
+            }}
+          >
+            Get Help
+          </Button>
+          <Button 
+            variant="contained" 
+            color={isMentalHealthChatBot() ? "error" : "primary" }
+            onClick={async () => {
+              if(isMentalHealthChatBot()){
+                setChatAPIMode(INSULTING_CHAT_BOT)
+              }
+              else if(isInsultingChatBot()){
+                setChatAPIMode(MENTAL_HEALTH_CHAT_BOT)
+              }
+              else {
+                setChatAPIMode(MENTAL_HEALTH_CHAT_BOT)
+              }
+            }}
+          >
+            {isMentalHealthChatBot() ? "Jim Mode" : "Default Mode"}
+          </Button>
+          <Button 
+            variant="contained" 
             color="primary"
             onClick={async () => {
               openAIChatHistory.clearChatHistory()
@@ -93,15 +138,6 @@ export const ChatList = () => {
             }}
           >
             Clear Chat
-          </Button>
-          <Button 
-            variant="contained" 
-            color="warning"
-            onClick={async () => {
-              await sendChatMessage("I need help")
-            }}
-          >
-            Get Help
           </Button>
         </ButtonGroup>
       </Box>

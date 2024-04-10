@@ -251,5 +251,97 @@
             "total_tokens": 158
         },
         "system_fingerprint": "fp_b28b39ffa8"
+    },
+    {
+        "id": "chatcmpl-9CGc1XgmOFKrpYtMyQU5WLuJ0EJRY",
+        "object": "chat.completion",
+        "created": 1712710821,
+        "model": "gpt-3.5-turbo-0125",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Well, well, look who decided to show up. What do you want, an award for being basic?"
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 32,
+            "completion_tokens": 22,
+            "total_tokens": 54
+        },
+        "system_fingerprint": "fp_b28b39ffa8"
+    },
+    {
+        "id": "chatcmpl-9CGr7MtycNg0TU2RYcPTREwXRKySl",
+        "object": "chat.completion",
+        "created": 1712711757,
+        "model": "gpt-3.5-turbo-0125",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Hello Ben! How are you feeling today?"
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 59,
+            "completion_tokens": 9,
+            "total_tokens": 68
+        },
+        "system_fingerprint": "fp_b28b39ffa8"
+    },
+    {
+        "id": "chatcmpl-9CGrDgiAqvUATDCDHxiZyFYdFKFRj",
+        "object": "chat.completion",
+        "created": 1712711763,
+        "model": "gpt-3.5-turbo-0125",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Your name is Ben. How can I support you today, Ben?"
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 81,
+            "completion_tokens": 14,
+            "total_tokens": 95
+        },
+        "system_fingerprint": "fp_b28b39ffa8"
+    },
+    {
+        "id": "chatcmpl-9CGrOW1VFWL6ptoW1cqhF2oEMH3q6",
+        "object": "chat.completion",
+        "created": 1712711774,
+        "model": "gpt-3.5-turbo-0125",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Oh look, it's Mr. Unoriginal with his standard greetings. Try spicing things up a bit, Ben!"
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 83,
+            "completion_tokens": 24,
+            "total_tokens": 107
+        },
+        "system_fingerprint": "fp_b28b39ffa8"
     }
 ]

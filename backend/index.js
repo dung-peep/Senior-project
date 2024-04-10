@@ -38,7 +38,7 @@ app.post('/queryOpenAIChatBot', async (req, res) => {
   try{
     const reqBody = req.body
   
-    const chatMessage = reqBody.chatMessageHistory
+    const chatMessage = reqBody.chatMessage
     const chatResponse = await openAI.singleMessageInput(chatMessage);
     res.json(chatResponse.data) 
   }
@@ -52,9 +52,9 @@ app.post('/queryMentalChatBot', async (req, res) => {
   try{
     const reqBody = req.body
     
-    const chatMessage = reqBody.chatMessageHistory
+    const chatMessageHistory = reqBody.chatMessageHistory
 
-    const chatResponse = await openAI.mentalHealthBot(chatMessage);
+    const chatResponse = await openAI.mentalHealthBot(chatMessageHistory);
     res.json(chatResponse.data) 
   }
   catch(err){
@@ -67,9 +67,9 @@ app.post('/queryInsultingChatBot', async (req, res) => {
   try{
     const reqBody = req.body
     
-    const chatMessage = reqBody.chatMessageHistory
+    const chatMessageHistory = reqBody.chatMessageHistory
 
-    const chatResponse = await openAI.insultBot(chatMessage);
+    const chatResponse = await openAI.insultBot(chatMessageHistory);
     res.json(chatResponse.data) 
   }
   catch(err){
