@@ -3,7 +3,10 @@ const backendURL = "http://localhost:4000"
 const handleFetch = async (endpoint, fetchOptions, handlerFunc) => {
     const url = backendURL + endpoint;
     return await fetch(url, fetchOptions)
-        .catch((err) => console.log(err))
+        .catch((err) => {
+            console.log(err)
+            throw err
+        })
         .then(
             (res) => {
                 return res.json()
@@ -13,7 +16,10 @@ const handleFetch = async (endpoint, fetchOptions, handlerFunc) => {
                 throw err;
             }
         )
-        .catch((err) => console.log(err))
+        .catch((err) => {
+            console.log(err)
+            throw err
+        })
         .then(
             (responseJson) => {
                 return handlerFunc(responseJson)
@@ -28,7 +34,6 @@ const handleFetch = async (endpoint, fetchOptions, handlerFunc) => {
 }
 
 const openAIDataHandler = (responseJson) => {
-    debugger
     return responseJson.choices[0].message
 }
 
