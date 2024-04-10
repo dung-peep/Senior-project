@@ -23,6 +23,7 @@ class chatHistoryHolder {
     }
 
     getChatHistory() {
+        debugger
         const chatHistory = JSON.parse(localStorage.getItem("chatHistory"));
         chatHistoryHolder.#chatHistory = chatHistory;
         return chatHistoryHolder.#chatHistory;

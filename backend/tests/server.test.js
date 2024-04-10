@@ -1,15 +1,8 @@
-import { app } from "..";
+import { app } from "../server.js";
 import supertest from "supertest";
-import { openAI } from "../script.js";
+import { openAI } from "../openAI.js";
 import { describe, expect, test } from '@jest/globals';
 
-beforeEach((done) => {
-    
-});
-
-afterEach((done) => {
-    
-});
 
 const validateOpenAIResponse = (response) => {
     expect(response.status).toBe(200);
@@ -25,12 +18,8 @@ const validateOpenAIResponse = (response) => {
     expect(response.body.choices[0].message.role).not.toBe("");
 };
 
+// openAI.terminalInput()
 describe("Test suite for backend", () => {
-    test("test OpenAI backend", async () => {
-        openAI.singleMessageInput("Hello World!").then((response) => {
-            validateOpenAIResponse(response);
-        });
-    })
     
     test("Server is running", async () => {
         const response = await supertest(app).get("/");

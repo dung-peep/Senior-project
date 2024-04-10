@@ -106,7 +106,7 @@ export const ChatList = () => {
             variant="contained" 
             color="warning"
             onClick={async () => {
-              setChatAPIMode(openAIMentalHealthChatBot)
+              setChatAPIMode(MENTAL_HEALTH_CHAT_BOT)
               await sendChatMessage("I need help. Please provide emergency mental health resources.")
             }}
           >

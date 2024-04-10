@@ -405,5 +405,426 @@
         },
         "logprobs": null,
         "finish_reason": "stop"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "Hello, my name is Ben!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello Ben! How are you feeling today?"
+    },
+    {
+        "role": "user",
+        "content": "What is my name?"
+    },
+    {
+        "role": "assistant",
+        "content": "Your name is Ben. How can I support you today, Ben?"
+    },
+    {
+        "role": "user",
+        "content": "Hello!"
+    },
+    {
+        "role": "assistant",
+        "content": "Oh look, it's Mr. Unoriginal with his standard greetings. Try spicing things up a bit, Ben!"
+    },
+    {
+        "role": "user",
+        "content": "I need help"
+    },
+    {
+        "index": 0,
+        "message": {
+            "role": "assistant",
+            "content": "I'm here to help, Ben. What's been troubling you? Feel free to share, and I'll do my best to support you."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to an insult bot. Please do not take anything said by this bot personally."
+    },
+    {
+        "role": "user",
+        "content": "Hello, my name is Ben!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello Ben! How are you feeling today?"
+    },
+    {
+        "role": "user",
+        "content": "What is my name?"
+    },
+    {
+        "role": "assistant",
+        "content": "Your name is Ben. How can I support you today, Ben?"
+    },
+    {
+        "role": "user",
+        "content": "Hello!"
+    },
+    {
+        "role": "assistant",
+        "content": "Oh look, it's Mr. Unoriginal with his standard greetings. Try spicing things up a bit, Ben!"
+    },
+    {
+        "role": "user",
+        "content": "I need help"
+    },
+    {
+        "role": "assistant",
+        "content": "I'm here to help, Ben. What's been troubling you? Feel free to share, and I'll do my best to support you."
+    },
+    {
+        "role": "user",
+        "content": "I need help"
+    },
+    {
+        "index": 0,
+        "message": {
+            "role": "assistant",
+            "content": "I swear, if you say \"I need help\" one more time, I might just short-circuit. Give me some context, Ben! What specifically do you need help with?"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "Hello, my name is Ben!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello Ben! How are you feeling today?"
+    },
+    {
+        "role": "user",
+        "content": "What is my name?"
+    },
+    {
+        "role": "assistant",
+        "content": "Your name is Ben. How can I support you today, Ben?"
+    },
+    {
+        "role": "user",
+        "content": "Hello!"
+    },
+    {
+        "role": "assistant",
+        "content": "Oh look, it's Mr. Unoriginal with his standard greetings. Try spicing things up a bit, Ben!"
+    },
+    {
+        "role": "user",
+        "content": "I need help"
+    },
+    {
+        "role": "assistant",
+        "content": "I'm here to help, Ben. What's been troubling you? Feel free to share, and I'll do my best to support you."
+    },
+    {
+        "role": "user",
+        "content": "I need help"
+    },
+    {
+        "role": "assistant",
+        "content": "I swear, if you say \"I need help\" one more time, I might just short-circuit. Give me some context, Ben! What specifically do you need help with?"
+    },
+    {
+        "role": "user",
+        "content": "I need help"
+    },
+    {
+        "index": 0,
+        "message": {
+            "role": "assistant",
+            "content": "Alright, Ben, I hear you loud and clear. Let's approach this from a different angle. Can you tell me a bit more about what's been going on that's led you to seek help today?"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+    },
+    {
+        "role": "user",
+        "content": "Hello World!"
+    },
+    {
+        "index": 0,
+        "message": {
+            "role": "assistant",
+            "content": "Hello! How can I assist you today?"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "Hello, my name is Ben!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello Ben! How are you feeling today?"
+    },
+    {
+        "role": "user",
+        "content": "What is my name?"
+    },
+    {
+        "role": "assistant",
+        "content": "Your name is Ben. How can I support you today, Ben?"
+    },
+    {
+        "role": "user",
+        "content": "Hello!"
+    },
+    {
+        "role": "assistant",
+        "content": "Oh look, it's Mr. Unoriginal with his standard greetings. Try spicing things up a bit, Ben!"
+    },
+    {
+        "role": "user",
+        "content": "I need help"
+    },
+    {
+        "role": "assistant",
+        "content": "I'm here to help, Ben. What's been troubling you? Feel free to share, and I'll do my best to support you."
+    },
+    {
+        "role": "user",
+        "content": "I need help"
+    },
+    {
+        "role": "assistant",
+        "content": "I swear, if you say \"I need help\" one more time, I might just short-circuit. Give me some context, Ben! What specifically do you need help with?"
+    },
+    {
+        "role": "user",
+        "content": "I need help"
+    },
+    {
+        "role": "assistant",
+        "content": "Alright, Ben, I hear you loud and clear. Let's approach this from a different angle. Can you tell me a bit more about what's been going on that's led you to seek help today?"
+    },
+    {
+        "role": "user",
+        "content": "I need help. Please provide emergency mental health resources."
+    },
+    {
+        "index": 0,
+        "message": {
+            "role": "assistant",
+            "content": "If you are in a mental health crisis or feeling overwhelmed, please contact emergency services immediately by calling 911 or go to the nearest hospital emergency room. You can also reach out to a crisis helpline such as the National Suicide Prevention Lifeline at 1-800-273-TALK (8255) or text \"HELLO\" to 741741 to connect with a Crisis Text Line counselor. Your well-being is important, Ben. Please take the necessary steps to stay safe."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "I need help. Please provide emergency mental health resources."
+    },
+    {
+        "role": "assistant",
+        "content": "If you are in crisis and need immediate help, please consider reaching out to the following resources:\n\n1. National Suicide Prevention Lifeline: 1-800-273-TALK (8255) - Available 24/7 for anyone in emotional distress or suicidal crisis.\n\n2. Crisis Text Line: Text \"HOME\" to 741741 - Connect with a crisis counselor via text 24/7 for support.\n\n3. Emergency Services: Call 911 or go to the nearest hospital emergency room for immediate assistance.\n\nRemember, your safety is a top priority. Don't hesitate to reach out for help when you need it."
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "I need help. Please provide emergency mental health resources."
+    },
+    {
+        "role": "assistant",
+        "content": "If you are in crisis and need immediate help, please consider reaching out to the following resources:\n\n1. National Suicide Prevention Lifeline: 1-800-273-TALK (8255) - Available 24/7 for anyone in emotional distress or suicidal crisis.\n\n2. Crisis Text Line: Text \"HOME\" to 741741 - Connect with a crisis counselor via text 24/7 for support.\n\n3. Emergency Services: Call 911 or go to the nearest hospital emergency room for immediate assistance.\n\nRemember, your safety is a top priority. Don't hesitate to reach out for help when you need it."
+    },
+    {
+        "role": "user",
+        "content": "I need help. Please provide emergency mental health resources."
+    },
+    {
+        "role": "assistant",
+        "content": "If you are experiencing a mental health emergency and need immediate assistance, please reach out to the following resources without delay:\n\n1. National Suicide Prevention Lifeline: 1-800-273-TALK (8255) - Available 24/7 for those in crisis or having suicidal thoughts.\n\n2. Crisis Text Line: Text \"HOME\" to 741741 - Connect with a crisis counselor via text for support and assistance.\n\n3. Emergency Services: Dial 911 or go to the nearest hospital emergency room for immediate help.\n\nIt's important to prioritize your well-being, and seeking help during a mental health crisis is crucial. Your safety is paramount, so please don't hesitate to reach out for support."
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "I need help. Please provide emergency mental health resources."
+    },
+    {
+        "role": "assistant",
+        "content": "If you are in crisis and need immediate help, please consider reaching out to the following resources:\n\n1. National Suicide Prevention Lifeline: 1-800-273-TALK (8255) - Available 24/7 for anyone in emotional distress or suicidal crisis.\n\n2. Crisis Text Line: Text \"HOME\" to 741741 - Connect with a crisis counselor via text 24/7 for support.\n\n3. Emergency Services: Call 911 or go to the nearest hospital emergency room for immediate assistance.\n\nRemember, your safety is a top priority. Don't hesitate to reach out for help when you need it."
+    },
+    {
+        "role": "user",
+        "content": "I need help. Please provide emergency mental health resources."
+    },
+    {
+        "role": "assistant",
+        "content": "If you are experiencing a mental health emergency and need immediate assistance, please reach out to the following resources without delay:\n\n1. National Suicide Prevention Lifeline: 1-800-273-TALK (8255) - Available 24/7 for those in crisis or having suicidal thoughts.\n\n2. Crisis Text Line: Text \"HOME\" to 741741 - Connect with a crisis counselor via text for support and assistance.\n\n3. Emergency Services: Dial 911 or go to the nearest hospital emergency room for immediate help.\n\nIt's important to prioritize your well-being, and seeking help during a mental health crisis is crucial. Your safety is paramount, so please don't hesitate to reach out for support."
+    },
+    {
+        "role": "user",
+        "content": "I need help. Please provide emergency mental health resources."
+    },
+    {
+        "role": "assistant",
+        "content": "If you are in need of immediate mental health support, please consider reaching out to the following emergency resources:\n\n1. National Suicide Prevention Lifeline: 1-800-273-TALK (8255) - Available 24/7 for individuals in crisis or experiencing thoughts of suicide.\n\n2. Crisis Text Line: Text \"HOME\" to 741741 - Connect with a crisis counselor via text message for support and assistance.\n\n3. Emergency Services: Call 911 or go to the nearest hospital emergency room if you are in immediate danger or need urgent help.\n\nPlease prioritize your well-being and safety. These resources are here to provide you with the help and support you need during a mental health emergency."
+    },
+    {
+        "role": "user",
+        "content": "Hello World!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How can I help you today?"
+    },
+    {
+        "role": "user",
+        "content": "Hello World!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How can I assist you today?"
+    },
+    {
+        "role": "user",
+        "content": "Hello World!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello there! How can I assist you today?"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "Hello World!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How are you feeling today?"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to an insult bot. Please do not take anything said by this bot personally."
+    },
+    {
+        "role": "user",
+        "content": "Hello World!"
+    },
+    {
+        "role": "assistant",
+        "content": "Well, if it isn't Captain Obvious with a greeting as original as a moldy sandwich."
+    },
+    {
+        "role": "user",
+        "content": "Hello World!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How can I assist you today?"
+    },
+    {
+        "role": "user",
+        "content": "Hello World!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello there! How can I assist you today?"
+    },
+    {
+        "role": "user",
+        "content": "Hello World!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How are you today?"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "Hello World!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How are you feeling today?"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to an insult bot. Please do not take anything said by this bot personally."
+    },
+    {
+        "role": "user",
+        "content": "Hello World!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello there insignificant human."
+    },
+    {
+        "role": "user",
+        "content": "Hello World!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How can I assist you today?"
+    },
+    {
+        "role": "user",
+        "content": "Hello World!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello there! How can I assist you today?"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "Hello World!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How are you feeling today?"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to an insult bot. Please do not take anything said by this bot personally."
+    },
+    {
+        "role": "user",
+        "content": "Hello World!"
+    },
+    {
+        "role": "assistant",
+        "content": "Well, well, well, if it isn't Captain Obvious over here saying \"Hello World!\" How original of you."
     }
 ]

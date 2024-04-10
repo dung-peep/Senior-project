@@ -53,12 +53,12 @@ class OpenAICls {
   }
 
   #logChatGPTMessage = async (jsonObject) => {
-    return this.#logChatMessage(jsonObject, OpenAICls.#parentPath, OpenAICls.#responseHistoryFilePath)
+    // return this.#logChatMessage(jsonObject, OpenAICls.#parentPath, OpenAICls.#responseHistoryFilePath)
   }
 
   #logConversation = async (chatGPTMessages, userMessages) => {
     const response = userMessages.concat(chatGPTMessages)
-    return this.#logChatMessage(response, OpenAICls.#parentPath, OpenAICls.#chatHistoryFilePath)
+    // return this.#logChatMessage(response, OpenAICls.#parentPath, OpenAICls.#chatHistoryFilePath)
   }
 
   #logChatMessage = async (jsonObject, parentFolderPath, filePath) => { // may be prone to race condition depending on how host OS handles reading and writing
@@ -170,7 +170,7 @@ class OpenAICls {
       messages: messages,
     })
 
-    this.#logConversation(response.data.choices, messages)
+    this.#logConversation(response.data.choices.map((choice) => choice.message), messages)
     this.#logChatGPTMessage(response.data)
     
     return response
