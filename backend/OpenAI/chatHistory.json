@@ -163,5 +163,155 @@
         },
         "logprobs": null,
         "finish_reason": "stop"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "Hello!"
+    },
+    {
+        "index": 0,
+        "message": {
+            "role": "assistant",
+            "content": "Hello! How are you feeling today?"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "Hello!"
+    },
+    {
+        "index": 0,
+        "message": {
+            "role": "assistant",
+            "content": "Hello! How are you feeling today?"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "Hello!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How are you feeling today?"
+    },
+    {
+        "role": "user",
+        "content": "My name is Ben!"
+    },
+    {
+        "index": 0,
+        "message": {
+            "role": "assistant",
+            "content": "Hello Ben! It's nice to meet you. How can I support you today?"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "Hello!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How are you feeling today?"
+    },
+    {
+        "role": "user",
+        "content": "My name is Ben!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello Ben! It's nice to meet you. How can I support you today?"
+    },
+    {
+        "role": "user",
+        "content": "What is my name?"
+    },
+    {
+        "index": 0,
+        "message": {
+            "role": "assistant",
+            "content": "Your name is Ben. How can I assist you today, Ben?"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "Hello!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! How are you feeling today?"
+    },
+    {
+        "role": "user",
+        "content": "My name is Ben!"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello Ben! It's nice to meet you. How can I support you today?"
+    },
+    {
+        "role": "user",
+        "content": "What is my name?"
+    },
+    {
+        "role": "assistant",
+        "content": "Your name is Ben. How can I assist you today, Ben?"
+    },
+    {
+        "role": "user",
+        "content": "Hola, como estas"
+    },
+    {
+        "index": 0,
+        "message": {
+            "role": "assistant",
+            "content": "¡Hola! Estoy aquí para ayudarte. ¿Cómo estás tú?"
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
+    },
+    {
+        "role": "system",
+        "content": "You are talking to a mental health bot. Please be aware that this bot is not a substitute for professional help. If you are in crisis, please call 911 or go to the nearest emergency room."
+    },
+    {
+        "role": "user",
+        "content": "I need immediate help!"
+    },
+    {
+        "index": 0,
+        "message": {
+            "role": "assistant",
+            "content": "I'm here to help. If you are in crisis or feeling overwhelmed, please contact emergency services or a crisis helpline right away. You can call 911 or a local emergency number for immediate assistance. If you prefer to talk to someone, you can reach out to a crisis helpline like the National Suicide Prevention Lifeline at 1-800-273-TALK (1-800-273-8255) for support. Your safety is important, so please reach out for help right now."
+        },
+        "logprobs": null,
+        "finish_reason": "stop"
     }
 ]

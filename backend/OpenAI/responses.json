@@ -113,5 +113,143 @@
             "total_tokens": 440
         },
         "system_fingerprint": "fp_b28b39ffa8"
+    },
+    {
+        "id": "chatcmpl-9CFuZqSkqDEumIRa0zOwXFYHa9nhg",
+        "object": "chat.completion",
+        "created": 1712708127,
+        "model": "gpt-3.5-turbo-0125",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Hello! How are you feeling today?"
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 54,
+            "completion_tokens": 8,
+            "total_tokens": 62
+        },
+        "system_fingerprint": "fp_b28b39ffa8"
+    },
+    {
+        "id": "chatcmpl-9CFwlInMCWqc5heEccJMaFuNTDOmQ",
+        "object": "chat.completion",
+        "created": 1712708263,
+        "model": "gpt-3.5-turbo-0125",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Hello! How are you feeling today?"
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 54,
+            "completion_tokens": 8,
+            "total_tokens": 62
+        },
+        "system_fingerprint": "fp_b28b39ffa8"
+    },
+    {
+        "id": "chatcmpl-9CFwwCQp1d65lGOlN06wbqj6RSUTS",
+        "object": "chat.completion",
+        "created": 1712708274,
+        "model": "gpt-3.5-turbo-0125",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Hello Ben! It's nice to meet you. How can I support you today?"
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 75,
+            "completion_tokens": 17,
+            "total_tokens": 92
+        },
+        "system_fingerprint": "fp_b28b39ffa8"
+    },
+    {
+        "id": "chatcmpl-9CFx7eYunQs1HWJzdkaFBZhkrhWII",
+        "object": "chat.completion",
+        "created": 1712708285,
+        "model": "gpt-3.5-turbo-0125",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Your name is Ben. How can I assist you today, Ben?"
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 105,
+            "completion_tokens": 14,
+            "total_tokens": 119
+        },
+        "system_fingerprint": "fp_b28b39ffa8"
+    },
+    {
+        "id": "chatcmpl-9CG9JKcwmr8pNaGrkxXgX1mzrjMeY",
+        "object": "chat.completion",
+        "created": 1712709041,
+        "model": "gpt-3.5-turbo-0125",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "¡Hola! Estoy aquí para ayudarte. ¿Cómo estás tú?"
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 131,
+            "completion_tokens": 16,
+            "total_tokens": 147
+        },
+        "system_fingerprint": "fp_b28b39ffa8"
+    },
+    {
+        "id": "chatcmpl-9CGIRqoJbsichMzUClyqtPKDM6enx",
+        "object": "chat.completion",
+        "created": 1712709607,
+        "model": "gpt-3.5-turbo-0125",
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "I'm here to help. If you are in crisis or feeling overwhelmed, please contact emergency services or a crisis helpline right away. You can call 911 or a local emergency number for immediate assistance. If you prefer to talk to someone, you can reach out to a crisis helpline like the National Suicide Prevention Lifeline at 1-800-273-TALK (1-800-273-8255) for support. Your safety is important, so please reach out for help right now."
+                },
+                "logprobs": null,
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 57,
+            "completion_tokens": 101,
+            "total_tokens": 158
+        },
+        "system_fingerprint": "fp_b28b39ffa8"
     }
 ]

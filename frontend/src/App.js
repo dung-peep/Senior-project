@@ -5,7 +5,10 @@ import {
 } from './apiRequests.js'
 import { useState, useEffect } from 'react';
 import * as React from 'react';
-import { FullWidthTextField } from './components/FullWidthTextField.js'
+import { ChatList } from './components/ChatList.js'
+// import Chat from './components/Chat.js';
+// import { Chat } from './components/ChatBox.js';
+
 
 
 
@@ -14,10 +17,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <p style={{
+          border: '10px solid rgb(14, 154, 75)',
+        }}>
           Please tell me how you are feeling?
         </p>
-        <FullWidthTextField/>
+        <ChatList/>
         <a
           className="App-link"
           // href="https://reactjs.org"
