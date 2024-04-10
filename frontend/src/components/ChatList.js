@@ -106,6 +106,8 @@ export const ChatList = () => {
             variant="contained" 
             color="warning"
             onClick={async () => {
+              openAIChatHistory.clearChatHistory()
+              setLocalChatHistory(openAIChatHistory.getChatHistoryMessages())
               setChatAPIMode(MENTAL_HEALTH_CHAT_BOT)
               await sendChatMessage("I need help. Please provide emergency mental health resources.")
             }}
@@ -125,6 +127,9 @@ export const ChatList = () => {
               else {
                 setChatAPIMode(MENTAL_HEALTH_CHAT_BOT)
               }
+
+              openAIChatHistory.clearChatHistory()
+              setLocalChatHistory(openAIChatHistory.getChatHistoryMessages())
             }}
           >
             {isMentalHealthChatBot() ? "Jim Mode" : "Default Mode"}
