@@ -29,7 +29,10 @@ const handleFetch = async (endpoint, fetchOptions, handlerFunc) => {
                 throw err;
             }
         )
-        .catch((err) => console.log(err))
+        .catch((err) => {
+            console.log(err)
+            throw err
+        })
 
 }
 
